@@ -1,0 +1,79 @@
+
+<skin>
+	<!-- menu templates -->
+	<screen name="menuleft">
+		<panel name="v-template1-des-pig" />
+		<ePixmap pixmap="v-backgrounds/main-menu-bg.png" position="150,377" size="828,704" alphatest="blend" />
+		<widget source="menu" render="Listbox" position="162,428" size="804,653" font="Regular;42" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-536-lr.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showNever" enableWrapAround="1" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [	
+                                MultiContentEntryText(pos = (138,0), size = (602,75), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	) ],
+				"fonts": [gFont("Regular",42)],
+				"itemHeight": 75
+				}</convert>
+		</widget>
+		<ePixmap pixmap="v-backgrounds/menu-gradient.png" position="0,e-53" size="1920,53" alphatest="blend" zPosition="10" />
+	</screen>
+	
+	<!-- menu screens -->
+	<screen name="Menu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" title="Menu">
+		<panel name="menuleft" />
+	</screen>
+	
+	<screen name="menu_mainmenu" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent" title="Main Menu">
+		<panel name="v-template1-des-pig" />
+		<ePixmap pixmap="v-backgrounds/main-menu-bg.png" position="150,377" size="828,704" alphatest="blend" />
+		<widget source="menu" render="Listbox" position="162,428" size="804,653" font="Regular;42" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-536-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showNever" enableWrapAround="1" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [	
+                                MultiContentEntryText(pos = (138,0), size = (602,75), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0	) ],
+				"fonts": [gFont("Regular",42)],
+				"itemHeight": 75
+				}</convert>
+		</widget>
+		<ePixmap pixmap="v-backgrounds/menu-gradient.png" position="0,e-53" size="1920,53" alphatest="blend" zPosition="10" />
+	</screen>
+	
+	<screen name="config">
+		<widget name="config" textOffset="15,0" position="129,428" size="1185,653" font="Regular;36" secondfont="Regular;36" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" enableWrapAround="1" transparent="1" scrollbarMode="showOnDemand" zPosition="2" />
+	</screen>
+	
+	<screen name="config-small">
+		<widget name="config" textOffset="15,0" position="129,428" size="1185,653" font="Regular;30" secondfont="Regular;30" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" enableWrapAround="1" transparent="1" scrollbarMode="showOnDemand" zPosition="2" />
+	</screen>
+	
+	<screen name="Setup-Default">
+		<panel name="v-template1-des-pig" />
+		<ePixmap pixmap="v-backgrounds/left-bg.png" position="0,377" size="1371,702" alphatest="blend" />
+		<panel name="config" />
+		<ePixmap pixmap="v-backgrounds/large-gradient.png" position="0,e-53" size="1920,53" alphatest="blend" zPosition="10" />
+		<panel name="New-Buttons-Top" />
+	</screen>
+	
+	<screen name="Setup" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="Setup-Default" />
+		<panel name="description" />
+		<panel name="HelpWindow" />
+		<panel name="footnote" />
+		<panel name="VKeyIcon" />
+	</screen>
+	
+	<screen name="VFD_INISetup" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="Setup-Default" />
+	</screen>
+	
+	<screen name="OpenWebifConfig" position="0,0" size="1920,1080" title="OpenWebif Configuration" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default" />
+	</screen>
+	
+	<screen name="setup_recording" title="Setup" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="v-template1-des-pig" />
+		<ePixmap pixmap="v-backgrounds/left-bg.png" position="0,377" size="1371,702" alphatest="blend" />
+		<panel name="config-small" />
+		<ePixmap pixmap="v-backgrounds/large-gradient.png" position="0,e-53" size="1920,53" alphatest="blend" zPosition="10" />
+		<panel name="New-Buttons-Top" />
+		<panel name="description" />
+		<panel name="HelpWindow" />
+		<panel name="footnote" />
+		<panel name="VKeyIcon" />
+	</screen>
+</skin>
+

@@ -1,0 +1,83 @@
+
+<skin>
+	<screen name="RemoteControlTemplate">
+		<widget name="rc" pixmaps="rc.png,rcold.png" position="1539,209" size="231,750" alphatest="blend" zPosition="11" />
+		<widget name="arrowdown" pixmap="arrowdown.png" position="-150,-225" size="56,105" alphatest="blend" zPosition="11" />
+		<widget name="arrowup" pixmap="arrowup.png" position="-150,-225" size="56,105" alphatest="blend" zPosition="11" />
+		<widget name="arrowup2" pixmap="arrowup.png" position="-150,-225" size="56,105" alphatest="blend" zPosition="11" />
+		<widget name="arrowdown2" pixmap="arrowdown.png" position="-150,-225" size="56,105" alphatest="blend" zPosition="11" />
+	</screen>
+	
+	<screen name="WizardTemplate">
+		<panel name="v-template2-nopig" />
+		<widget name="text" position="129,216" size="1193,195" foregroundColor="fg1" backgroundColor="bg-mm-dark" font="Regular;33" valign="top" transparent="1" />
+		<widget name="config" textOffset="15,0" position="129,434" size="1185,525" font="Regular;39" secondfont="Regular;39" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
+		<widget source="list" render="Listbox" position="0,434" size="1361,525" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" scrollbarMode="showNever" transparent="1">
+			<convert type="TemplatedMultiContent">{"template": [
+                                MultiContentEntryText(pos = (129, 18), size = (1361, 75), flags = RT_HALIGN_LEFT, text = 0) ],
+				"fonts": [gFont("Regular", 39)],
+				"itemHeight": 75,
+				"scrollbarMode": "showNever"
+				}</convert>
+		</widget>
+		<panel name="New-Buttons-Bot" />
+		<panel name="RemoteControlTemplate" />
+	</screen>
+	
+	<screen name="HelpMenu" position="fill" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-nopig" />
+		<widget name="list" textOffset="15,12" position="129,216" size="1193,756" font="Regular;39" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-42-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="63" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
+		<widget name="long_key" position="1344,1002" size="576,60" font="Regular;32" foregroundColor="fg2" backgroundColor="bg-mr" halign="center" transparent="1" />
+		<panel name="RemoteControlTemplate" />
+	</screen>
+	
+	<screen name="StartWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="ImageWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="DefaultWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="NetworkWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="DefaultSatLists" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="DreamPackageWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="LanguageWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
+		<panel name="v-template2-nopig" />
+		<widget name="text" position="129,216" size="1193,195" font="Regular;33" foregroundColor="fg1" backgroundColor="bg-mm-dark" valign="top" transparent="1" />
+		<widget source="languages" render="Listbox" position="0,828" size="1361,525" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" scrollbarMode="showOnDemand" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [
+				MultiContentEntryText(pos = (234,18), size = (1256,75), flags = RT_HALIGN_LEFT, text = 1), # index 1 is the language name,
+				MultiContentEntryPixmapAlphaBlend(pos = (129,8), size = (90,60), png = 2), # index 2 is the pixmap
+				],
+				"fonts": [gFont("Regular", 39)],
+				"itemHeight": 75
+				}</convert>
+		</widget>
+		<widget name="config" textOffset="15,0" position="129,434" size="1185,525" font="Regular;39" secondfont="Regular;39" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" transparent="1" enableWrapAround="1" scrollbarMode="showOnDemand" />
+		<panel name="New-Buttons-Bot" />
+		<panel name="RemoteControlTemplate" />
+	</screen>
+	
+	<screen name="CleanupWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="VideoWizard" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="black">
+		<panel name="WizardTemplate" />
+	</screen>
+</skin>
+

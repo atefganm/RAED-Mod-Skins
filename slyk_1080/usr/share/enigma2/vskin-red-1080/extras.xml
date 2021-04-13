@@ -1,0 +1,45 @@
+<skin>
+
+	<!-- Change the end number of each panel name in that section to personalise your skin. -->
+	<!-- DO NOT edit the screen name - only the panel name number -->
+	<!-- Reboot GUI required.-->
+	
+	<!-- 1 = vskin logo (default) -->
+	<!-- 2 = Official logo -->
+	<!-- 3 = None -->
+	 <screen name="main-logo">
+		<panel name="main-logo1" />
+	</screen>
+	
+         <screen name="main-logo-sm">
+		<panel name="main-logo-sm1" />
+	</screen>
+	
+	#########################################################################################################
+	
+	<!-- 1 = tv logo -->
+	<!-- 2 = tivo logo -->
+	<!-- 3 = 3d tivo man logo -->
+	<!-- 4 = blankman logo -->
+	<screen name="tv-logo">
+	       	<panel name="tv-logo1" />
+        </screen>
+        
+       	#########################################################################################################
+
+	<!-- EPGS                                                -->
+	<!-- EPG SKY TABS - amend the panel numbers below        -->
+	<!-- 1 = original no tabs (default)                      -->
+	<!-- 2 = sky tabs - This also requires the EpgSelection.py as found in my dropbox. EpgSelection.py needs to be placed in /usr/lib/enigma2/python/Screens. Reboot required. -->
+	<!-- edit both panels -->
+	<!-- EPG  (epg button)-->
+	
+        <screen name="GraphicalEPGPIG" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GraphicalEPGPIG1" />
+	</screen>
+	
+	<screen name="GraphicalEPG" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="GraphicalEPG1" />
+	</screen>
+	
+</skin>

@@ -1,0 +1,117 @@
+
+<skin>
+	<screen name="TimerEditList" title="Timer editor" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="timerlist" position="129,216" size="1193,756" setFont="Regular; 27" setEventNameFont="Regular; 32" setServiceNameFont="Regular; 32" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" itemHeight="84" iconMargin="15" rowSplit="41" satPosLeft="350" scrollbarMode="showNever" enableWrapAround="1" transparent="1" zPosition="2" />
+		<panel name="description" />
+		<panel name="New-Buttons-Bot" />
+		<ePixmap pixmap="v-buttons/key_ok.png" position="1383,1002" size="57,45" alphatest="blend" zPosition="3" />
+		<eLabel text="Edit Timer" position="1440,1002" size="150,45" font="Regular;33" foregroundColor="fg3" backgroundColor="bg-br" valign="center" halign="left" transparent="1" zPosition="3" />
+		<ePixmap pixmap="v-buttons/key_info.png" position="1620,1002" size="57,45" alphatest="blend" zPosition="3" />
+		<eLabel text="Timer Log" position="1689,1002" size="150,45" font="Regular;33" foregroundColor="fg3" backgroundColor="bg-br" valign="center" halign="left" transparent="1" zPosition="3" />
+	</screen>
+	
+	<!-- Timer entry -->
+	<screen name="TimerEntry" title="Timer entry" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default" />
+		<panel name="description" />
+		<panel name="HelpWindow" />
+		<panel name="VKeyIcon" />
+	</screen>
+	
+	<!-- Timer log / timer info button-->
+	<screen name="TimerLog" title="Timer log" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="loglist" textOffset="30,15" position="0,216" size="1362,756" font="Regular;36" secondfont="Regular;36" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" valign="center" enableWrapAround="1" transparent="1" scrollbarMode="showNever" zPosition="2" />
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<!-- Timer sanity conflict -->
+	<screen name="TimerSanityConflict" position="0,0" title="Timer Conflict" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="timer1" position="129,216" size="1193,84" setFont="Regular;27" setEventNameFont="Regular;32" setServiceNameFont="Regular;32" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="highlightBG" itemHeight="84" rowSplit="41" iconMargin="15" satPosLeft="350" scrollbarMode="showNever" enableWrapAround="1" transparent="1" zPosition="2" />
+		<widget name="list" textOffset="8,3" position="129,366" size="1193,45" font="Regular;32" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="highlightBG" itemHeight="45" scrollbarMode="showNever" transparent="0" />
+		<widget name="timer2" position="129,420" size="1193,504" setFont="Regular;27" setEventNameFont="Regular;32" setServiceNameFont="Regular;32" foregroundColor="fg1" foregroundColorSelected="selected" backgroundColor="bg-mm-dark" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" iconMargin="15" itemHeight="84" rowSplit="41" satPosLeft="350" scrollbarMode="showNever" enableWrapAround="1" transparent="1" />
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<!-- stop a recording selection -->
+	<!-- Timer Selection -->
+	<screen name="TimerSelection" title="Timer selection" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="timerlist" position="129,216" size="1193,756" setFont="Regular; 27" setEventNameFont="Regular; 32" setServiceNameFont="Regular; 32" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="84" iconMargin="15" rowSplit="41" satPosLeft="350" scrollbarMode="showNever" enableWrapAround="1" transparent="1" zPosition="2" />
+		<panel name="description" />
+		<ePixmap pixmap="v-buttons/key_ok.png" position="1383,1002" size="57,45" alphatest="blend" zPosition="3" />
+		<eLabel text="Press OK to select" position="1440,1002" size="300,45" font="Regular;33" foregroundColor="fg3" backgroundColor="bg-br" valign="center" halign="left" transparent="1" zPosition="3" />
+	</screen>
+	
+	<!-- ## Autotimer ## -->
+	<screen name="AutoTimerOverview" position="0,0" size="1920,1080" title="AutoTimer Overview" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="entries" position="129,216" size="1193,756" EventNameFont="Regular;32" DayNameFont="Regular;27" ServiceNameFont="Regular;27" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-70-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="105" rowSplit1="38" rowSplit2="65" rowHeight="42" iconMargin="15" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" zPosition="2" />
+		<panel name="New-Buttons-Bot" />
+		<ePixmap pixmap="v-buttons/key_menu.png" position="1745,1002" size="57,45" alphatest="blend" zPosition="3" />
+		<ePixmap pixmap="v-buttons/key_ok.png" position="1383,1002" size="57,45" alphatest="blend" zPosition="3" />
+		<eLabel text="Edit Timer" position="1440,1002" size="150,45" font="Regular;33" foregroundColor="fg3" backgroundColor="bg-br" valign="center" halign="left" transparent="1" zPosition="3" />
+	</screen>
+	
+	<screen name="AutoTimerImporter" position="0,0" size="1920,1080" title="Import AutoTimer" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="list" textOffset="15,18" position="129,216" size="1193,750" font="Regular;39" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" enableWrapAround="1" transparent="1" zPosition="2" />
+		<panel name="New-Buttons-Bot" />
+	</screen>
+
+	<screen name="AutoTimerEditor" position="0,0" size="1920,1080" title="Edit AutoTimer" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default" />
+		<widget source="help" render="Label" position="1383,428" size="417,653" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mm" transparent="1" />
+	</screen>
+	
+	<screen name="AutoTimerFilterEditor" position="0,0" size="1920,1080" title="Edit AutoTimer Filters" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default" />
+		<widget source="help" render="Label" position="1383,428" size="417,653" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mm" transparent="1" />
+	</screen>
+	
+	<screen name="AutoTimerServiceEditor" title="Edit AutoTimer Services" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default" />
+	</screen>
+	
+	<screen name="AutoTimerSettings" position="0,0" size="1920,1080" title="AutoTimer Settings" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="Setup-Default" />
+		<widget source="help" render="Label" position="1383,428" size="417,653" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" />
+	</screen>
+	
+	<screen name="AutoTimerFAQ" position="0,0" size="1920,1080" title="AutoTimer FAQ" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="detailtext" position="129,216" size="1193,756" font="Regular;32" foregroundColor="fg1" backgroundColor="bg-mm-dark" scrollbarMode="showOnDemand" transparent="1" />
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<screen name="AutoTimerHelp" position="0,0" size="1920,1080" title="AutoTimer Help" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="detailtext" position="129,216" size="1193,756" font="Regular;32" foregroundColor="fg1" backgroundColor="bg-mm-dark" scrollbarMode="showOnDemand" transparent="1" />
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<screen name="AutoTimerWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="AutoTimerPreview" position="0,0" size="1920,1080" title="Preview AutoTimer" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget source="timerlist" render="Listbox" position="129,216" size="1193,756" foregroundColor="fg1" backgroundColor="bg-mm-dark" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" transparent="1" zPosition="5">
+			<convert type="TemplatedMultiContent">{"template": [
+						MultiContentEntryText(pos=( 15,0), size=(585,36), text = 4, font = 0, flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER),
+						MultiContentEntryText(pos=( 600, 0), size=(578,36), text = 3, font = 0, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER),
+						MultiContentEntryText(pos=( 600,39), size=(578,36), text = 0, font = 1, flags = RT_HALIGN_RIGHT|RT_VALIGN_CENTER),
+					],
+				 "fonts": [gFont("Regular",32),gFont("Regular",27)],
+				 "itemHeight": 75
+				}</convert>
+		</widget>
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<!-- CronTimer -->
+	<!-- now in infopanel file -->
+</skin>
+

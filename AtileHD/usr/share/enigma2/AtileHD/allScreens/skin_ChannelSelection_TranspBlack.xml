@@ -1,0 +1,56 @@
+<skin>
+<screen name="ChannelSelection" position="0,0" size="1280,720" title="Channel Selection" flags="wfNoBorder" transparent="0">
+  <eLabel position="0,0" size="1280,720" zPosition="-15" backgroundColor="shadow" />
+  <eLabel position=" 55,675" size="290, 5" zPosition="-10" backgroundColor="tile_red" />
+  <eLabel position="350,675" size="290, 5" zPosition="-10" backgroundColor="tile_green" />
+  <eLabel position="645,675" size="290, 5" zPosition="-10" backgroundColor="tile_yellow" />
+  <eLabel position="940,675" size="290, 5" zPosition="-10" backgroundColor="tile_blue" />
+  <eLabel text="Channel Selection" position="70,47" size="950,43" font="Regular;35" foregroundColor="titletext" backgroundColor="backtop" transparent="1" />
+  <widget source="global.CurrentTime" render="Label" position="1020,40" size="200,50" font="Regular;50" halign="right" foregroundColor="titletext" backgroundColor="backtop" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="Title" render="Label" position="70,110" size="700,28" font="Regular;23" backgroundColor="background" transparent="1" />
+  <widget source="ServiceEvent" position="780,100" size="120,70" render="Picon" zPosition="2" transparent="1" alphatest="blend">
+    <convert type="ServiceName2">Reference</convert>
+  </widget>
+  <widget name="list" position="70,155" size="700,450" scrollbarMode="showNever" scrollbarWidth="6" scrollbarSliderBorderWidth="1" scrollbarSliderForegroundColor="selectedScrollFG" scrollbarSliderBorderColor="selectedScrollBG" colorServiceDescription="cyan" colorServiceDescriptionSelected="lime" colorEventProgressbarBorder="progressbar_color" colorEventProgressbarBorderSelected="selectedFG" foregroundColorServiceNotAvail="#777777" colorServiceRecording="red" serviceItemHeight="30" serviceNumberFont="Regular;22" serviceNameFont="Regular;22" serviceInfoFont="Regular;21" transparent="1" />
+  <widget source="ServiceEvent" render="Label" position="780,231" size="445,26" font="Regular; 22" backgroundColor="background" transparent="1" halign="center">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="916,105" size="135,60" font="Regular; 28" foregroundColor="selectedScrollFG" backgroundColor="shadow" transparent="1" valign="center" halign="center">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">
+    </convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="1078,105" size="135,60" font="Regular; 28" foregroundColor="selectedScrollFG" backgroundColor="shadow" transparent="1" valign="center" halign="center">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="780,260" size="445,230" font="Regular; 22" backgroundColor="background" transparent="1" valign="top">
+    <convert type="EventName">ExtendedDescription</convert>
+  </widget>
+  <widget source="ServiceEvent" render="NextEvents" position="780,495" size="445,110" noWrap="1" font="Regular;20" foregroundColor="foreground" backgroundColor="background" transparent="1">
+  <convert type="ServiceName2">Reference</convert>
+</widget>
+  <widget source="ServiceEvent" render="Label" position="780,175" size="445,26" font="Regular; 21" backgroundColor="background" transparent="1" halign="center" noWrap="1" valign="center" text="(7.0E) DVB-S2 10627 27500 3/4 8PSK" zPosition="3">
+    <convert type="ServiceName2">(%O) %s %F %p %Y %f %M %b</convert>
+  </widget>
+  <widget source="ServiceEvent" render="Label" position="780,203" size="445,26" font="Regular; 21" backgroundColor="background" transparent="1" halign="center" noWrap="1" valign="center" text="1:0:1:6D66:437:1:C00000:0:0:0" zPosition="3">
+    <convert type="ServiceName2">%R</convert>
+  </widget>
+  <widget name="key_red" position="70,635" size="260,25" zPosition="1" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="tile_red_big" transparent="1" />
+  <widget name="key_green" position="365,635" size="260,25" zPosition="1" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="tile_green_big" transparent="1" />
+  <widget name="key_yellow" position="660,635" size="260,25" zPosition="1" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="tile_yellow_big" transparent="1" />
+  <widget name="key_blue" position="955,635" size="260,25" zPosition="0" font="Regular;20" halign="left" foregroundColor="foreground" backgroundColor="tile_blue_big" transparent="1" />
+  <eLabel name="" position="65,34" size="2,578" backgroundColor="dark" />
+  <eLabel name="" position="1225,34" size="2,578" backgroundColor="dark" />
+  <eLabel name="" position="775,98" size="2,513" backgroundColor="dark" />
+  <eLabel name="" position="65,34" size="1160,2" backgroundColor="dark" />
+  <eLabel name="" position="65,95" size="1160,2" backgroundColor="dark" />
+  <eLabel name="" position="65,145" size="710,2" backgroundColor="dark" />
+  <eLabel name="" position="65,610" size="1160,2" backgroundColor="dark" />
+  <eLabel name="" position="775,172" size="450,2" backgroundColor="dark" />
+  <eLabel name="" position="775,257" size="450,2" backgroundColor="dark" />
+  <eLabel name="" position="775,491" size="450,2" backgroundColor="dark" />
+</screen>
+</skin>

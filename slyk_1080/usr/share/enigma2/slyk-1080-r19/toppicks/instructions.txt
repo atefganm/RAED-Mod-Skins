@@ -1,0 +1,107 @@
+VERSION 5.200 or above of Slyk 1 HD skin required for this modification. 
+
+These instructions are for OpenATV, Vix instructions will vary for location and manual script running.
+
+This modification brings in the toppicks screens on loading the epg. 
+Show bouquets on launch is required for this modification to work. 
+
+Press Epg button
+Press Menu
+Change settings of "Show Bouquets on Launch" to yes.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Download and extract toppicks.zip 
+
+Contents of the zip:
+
+usr
+  script
+    toppicks1.sh
+    toppicks2.sh
+	
+FTP these 2 files to the same location on your box as this folder structure.
+
+usr/script
+
+In your ftp software change the file attributes of these 2 files on your box to be executable (755). See toppickspermissions.png
+To change the file attributes right click on the files and their will be an option there to change the file attributes.
+
+** ** OpenVix ** **
+
+I beleive the location of the scripts folder is slightly different for openvix.
+On vix you will need to create a folder usr/scripts (and not usr/script).
+You then need to edit toppicks1.sh and toppicks2.sh to reference this folder instead.
+
+workdir=/usr/scripts/scrapes
+
+if [ ! -d "$workdir" ]; then
+
+	mkdir /usr/scripts/scrapes
+
+fi
+
+cd /usr/scripts/scrapes
+
+** ** ** ** **
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Open up skin.xml in my skin folder
+
+/usr/share/enigma2/slyk-1-hd
+
+remove the comment tags around the toppicks.xml include.
+
+<!-- <include filename="/usr/share/enigma2/slyk-1-hd/toppicks.xml" /> -->	
+  
+becomes
+
+<include filename="/usr/share/enigma2/slyk-1-hd/toppicks.xml" />	
+
+** Reboot your GUI. **
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+After you have all the files in place. You can manually run the script to get you going. After that we will use the cron timers.
+
+ATV
+Menu > infopanel > plugins > Jobmanager (run both scripts once)
+
+VIX
+Menu > setup > vix > script-runner(run both scripts once)
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Once it is installed you need to set up your cron timers. (see toppicks-crontimers.jpg)
+
+MENU > TIMERS > CRON TIMERS > GREEN
+
+There are 2 scripts to setup. Toppicks1.sh is the web scrape. Set this to daily. Use a random time as we don't all want to be scraping sly at the same time
+Toppicks2.sh is the image randomiser. set it to hourly (see below if you want it set at a shorter period)
+
+If you want to edit your toppicks2.sh cron timer to work say every 15 minutes go into etc/cron/crontabs/root and edit that file.
+
+for the toppicks2.sh if you use the format
+*/15 * * * * /usr/script/toppicks2.sh
+
+the */15 will call the cron every 15 minutes or whatever you choose. Bear in mind when this script runs in the background you will get a brief screen freeze. So don't set it too regular.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+If the scripts have run correctly you will have a new folder in user/script/ called scrapes.
+
+
+
+
+
+
+
+  
+  
+
+
+	

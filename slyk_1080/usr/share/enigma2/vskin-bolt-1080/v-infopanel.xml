@@ -1,0 +1,133 @@
+
+<skin>
+	<!-- Info Panel Menus -->
+	<screen name="Infopanel" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template1-des-pig" />
+		<ePixmap pixmap="v-backgrounds/main-menu-bg.png" position="150,377" size="828,704" alphatest="blend" zPosition="1" />
+		<widget name="Mlist" position="200,428" size="726,653" font="Regular;42" foregroundColor="fg1" backgroundColor="bg-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-484.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
+		<ePixmap pixmap="v-backgrounds/menu-gradient.png" position="0,e-53" size="1920,53" alphatest="blend" zPosition="10" />
+	</screen>
+	
+	<!-- ##MountManager## -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/MountManager.py -->
+	<!-- MountManager -->
+	<screen name="HddMount" position="0,0" size="1920,1080" title="Mount Manager" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget source="list" render="Listbox" position="0,216" size="1361,767" foregroundColor="fg1" backgroundColor="bg-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-85-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" enableWrapAround="1" scrollbarMode="showNever" transparent="1">
+			<convert type="TemplatedMultiContent">{"template": [
+				 MultiContentEntryText(pos = (279, 8), size = (1193, 45), font=0, text = 0),
+				 MultiContentEntryText(pos = (279, 45), size = (1193, 75), font=1, flags = RT_VALIGN_TOP, text = 1),
+				 MultiContentEntryPixmapAlphaBlend(pos = (129, 8), size = (120, 120), png = 2),
+				],
+				"fonts": [gFont("Regular",36),gFont("Regular",30)],
+				"itemHeight": 128
+				}</convert>
+		</widget>
+		<widget name="lab1" position="129,216" size="1193,767" font="Regular;32" foregroundColor="fg1" backgroundColor="bg-mm" valign="center" halign="center" transparent="1" zPosition="2" />
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<!-- hhdmounts - setup mounts -->
+	<screen name="DevicePanelConf" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="Setup-Default" />
+		<widget name="Linconn" position="1383,428" size="417,653" font="Regular;30" foregroundColor="fg1" backgroundColor="bg-mr" transparent="1" zPosition="2" />
+	</screen>
+	
+	<!-- CronManager (info panel ->  extensions -> cron manager, is different to timer menu -> cron timers) -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/CronManager.py -->
+	<screen name="CronTimers" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<panel name="active-block" />
+		<widget source="list" render="Listbox" position="0,308" size="1314,672" foregroundColor="fg1" backgroundColor="bg-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-849-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" valign="center" itemHeight="75" transparent="1">
+			<convert type="TemplatedMultiContent">{"template": [
+				 MultiContentEntryText(pos = (129, 15), size = (1193, 45), font=0, text = 0),
+				],
+				"fonts": [gFont("Regular",36)],
+				"itemHeight": 75
+				}</convert>
+		</widget>
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<!-- ##ScriptRunner## / JobManager -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/ScriptRunner.py -->
+	<screen name="ScriptRunner" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="lab1" position="129,215" size="1193,75" font="Regular;36" foregroundColor="fg1" backgroundColor="bg-mm" valign="center" transparent="1" />
+		<widget name="list" textOffset="129,15" position="0,305" size="1361,675" font="Regular; 36" foregroundColor="fg1" backgroundColor="bg-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" scrollbarMode="showNever" enableWrapAround="1" transparent="1" zPosition="5" />
+		<panel name="New-Buttons-Bot" />
+		<applet type="onLayoutFinish">self["list"].instance.setItemHeight(75)</applet>
+	</screen>
+	
+	<!-- ##SwapManager## -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/SwapManager.py -->
+	<screen name="Swap" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="autostart_off" position="129,450" size="48,48" zPosition="1" pixmap="icons/lock_off.png" alphatest="blend" />
+		<widget name="autostart_on" position="129,450" size="48,48" zPosition="2" pixmap="icons/lock_on.png" alphatest="blend" />
+		<widget name="lab1" position="189,450" size="540,45" font="Regular;32" valign="center" transparent="1" foregroundColor="fg1" backgroundColor="bg-mm" />
+		<widget name="lab2" position="129,525" size="225,45" font="Regular;32" valign="center" transparent="1" foregroundColor="fg1" backgroundColor="bg-mm" />
+		<widget name="lab3" position="129,600" size="225,45" font="Regular;32" valign="center" transparent="1" foregroundColor="fg1" backgroundColor="bg-mm" />
+		<widget name="lab4" position="129,675" size="225,45" font="Regular;32" valign="center" transparent="1" foregroundColor="fg1" backgroundColor="bg-mm" />
+		<widget name="labplace" position="354,525" size="330,45" font="Regular;32" valign="center" foregroundColor="fg2" backgroundColor="bg-mm" transparent="1" />
+		<widget name="labsize" position="354,600" size="330,45" font="Regular;32" valign="center" foregroundColor="fg2" backgroundColor="bg-mm" transparent="1" />
+		<widget name="inactive" position="354,675" size="150,45" font="Regular;32" valign="center" halign="center" foregroundColor="fg1" backgroundColor="red" />
+		<widget name="active" position="354,675" size="150,45" font="Regular;32" valign="center" halign="center" foregroundColor="fg1" backgroundColor="green" />
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<!-- ##QuickMenu ## -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/QuickMenu.py -->
+	<screen name="QuickMenu" position="0,0" size="1920,1080" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="v-template2-pig" />
+		<widget name="list" position="129,216" size="570,750" foregroundColor="fg1" backgroundColor="bg-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" itemHeight="75" transparent="1" />
+		<widget name="sublist" position="744,216" size="570,750" foregroundColor="fg1" backgroundColor="bg-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" itemHeight="75" transparent="1" />
+		<eLabel position="729,213" size="3,750" backgroundColor="fg2" zPosition="3" />
+		<panel name="description" />
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<screen name="QuickMenuDevices" position="0,0" size="1920,1080" title="Devices" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget source="devicelist" render="Listbox" position="0,216" size="1361,767" foregroundColor="fg1" backgroundColor="bg-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-85-907-r.png" backgroundPixmap="v-selectbars/selectbar-bg.png" enableWrapAround="1" scrollbarMode="showNever" transparent="1">
+			<convert type="TemplatedMultiContent">{"template": [
+				 MultiContentEntryText(pos = (279, 8), size = (1193, 45), font=0, text = 0),
+				 MultiContentEntryText(pos = (279, 45), size = (1193, 75), font=1, flags = RT_VALIGN_TOP, text = 1),
+				 MultiContentEntryPixmapAlphaBlend(pos = (129, 8), size = (120, 120), png = 2),
+				],
+				"fonts": [gFont("Regular",36),gFont("Regular",30)],
+				"itemHeight": 128
+				}</convert>
+		</widget>
+		<widget name="lab1" position="129,216" size="1193,767" font="Regular;32" foregroundColor="fg1" backgroundColor="bg-mm" valign="center" halign="center" transparent="1" zPosition="2" />
+	</screen>
+	
+	<!-- ##RestartNetwork## -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/RestartNetwork.py -->
+	<screen name="RestartNetwork" position="center,center" size="750,150" title="Restart Network Adapter">
+		<widget name="label" position="15,45" size="750,75" font="Regular;30" foregroundColor="fg1" backgroundColor="messagebox-bg" valign="center" halign="center" transparent="1" />
+	</screen>
+	
+	<!-- ##SoftcamPanel## -->
+	<!-- /lib/python/Plugins/Extensions/Infopanel/SoftcamPanel.py -->
+	<screen name="SoftcamPanel" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="config" textOffset="15,0" position="129,215" size="1185,150" font="Regular;36" secondfont="Regular;36" foregroundColor="fg1" backgroundColor="bg-mm" foregroundColorSelected="selected" backgroundColorSelected="selected-gfx-bg" selectionPixmap="v-selectbars/selectbar-1280-square.png" backgroundPixmap="v-selectbars/selectbar-bg.png" itemHeight="75" enableWrapAround="1" transparent="1" scrollbarMode="showNever" zPosition="2" />
+		<ePixmap pixmap="v-backgrounds/softcam-block.png" position="129,426" size="578,105" alphatest="blend" zPosition="2" />
+		<ePixmap pixmap="v-backgrounds/softcam-block.png" position="737,426" size="578,105" alphatest="blend" zPosition="2" />
+		<widget name="actifcam" position="144,426" size="548,75" font="Regular;32" foregroundColor="fg1" backgroundColor="highlightBG" itemHeight="75" valign="center" halign="left" transparent="1" zPosition="3" />
+		<widget name="actifcam2" position="752,426" size="548,75" font="Regular;32" foregroundColor="fg1" backgroundColor="highlightBG" itemHeight="75" valign="center" halign="right" transparent="1" zPosition="3" />
+		<widget name="ecminfo" position="144,551" size="1277,408" font="Regular;30" foregroundColor="fg1" backgroundColor="bg-mm" transparent="1" zPosition="2" />
+		<panel name="New-Buttons-Bot" />
+	</screen>
+	
+	<!-- ShowSoftcamPackages see v-non-common.xml -->
+	<!-- SoftwarePanel see v-non-common.xml -->
+	<!-- Info Panel Infos -->
+	<screen name="Info" position="0,0" size="1920,1080" title="Info" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="v-template2-pig" />
+		<widget name="label2" position="129,216" size="1193,36" font="Console;27" foregroundColor="fg2" backgroundColor="bg-mm" transparent="1" zPosition="2" />
+		<widget name="label1" position="129,266" size="1193,705" font="Console;24" foregroundColor="fg1" backgroundColor="bg-mm" transparent="1" zPosition="3" />
+	</screen>
+</skin>
+
